@@ -1,0 +1,26 @@
+﻿<Window x:Class="WindowsClientCore.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WindowsClientCore"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <DockPanel LastChildFill = "True">
+            <ScrollViewer DockPanel.Dock="Left">
+                <StackPanel Orientation="Vertical" x:Name="ServerList">
+                    <Button Width="50" Height="50" x:Name="BtnGm2" Click="BtnGm2_Click">
+                        <DockPanel LastChildFill="True">
+                            <Image Source="Gearicon.png" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        </DockPanel>
+                    </Button>
+                </StackPanel>
+            </ScrollViewer>
+            <ScrollViewer>
+                <StackPanel Orientation="Vertical" x:Name="ServerContent">
+                </StackPanel>
+            </ScrollViewer>
+        </DockPanel>
+    </Grid>
+</Window>
