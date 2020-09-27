@@ -8,17 +8,54 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <DockPanel LastChildFill = "True">
-            <ScrollViewer DockPanel.Dock="Left">
-                <StackPanel Orientation="Vertical" x:Name="ServerList">
-                    <Button Width="50" Height="50" x:Name="BtnGm2" Click="BtnGm2_Click">
-                        <DockPanel LastChildFill="True">
-                            <Image Source="Gearicon.png" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            
+            <ScrollViewer 
+                DockPanel.Dock="Left">
+                <StackPanel 
+                    Orientation="Vertical" 
+                    x:Name="ServerListStackPanel">
+                    
+                    <Button 
+                        Width="50" 
+                        Height="50" 
+                        x:Name="BtnGm2" 
+                        Click="BtnGm2_Click">
+                        <DockPanel 
+                            LastChildFill="True">
+                            <Image 
+                                Source="Gearicon.png" 
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Center"
+                            />
                         </DockPanel>
                     </Button>
+                    
                 </StackPanel>
             </ScrollViewer>
+
+            <DockPanel 
+                DockPanel.Dock="Bottom" 
+                LastChildFill = "True">
+                <Button 
+                    DockPanel.Dock="Right">
+                    -=-Send=-
+                </Button>
+                <TextBox x:Name="InputField"/>
+            </DockPanel>
+            
             <ScrollViewer>
-                <StackPanel Orientation="Vertical" x:Name="ServerContent">
+                <StackPanel 
+                    Orientation="Vertical" 
+                    x:Name="ServerContent">
+                    <Border  HorizontalAlignment="Left" BorderBrush="Blue" BorderThickness="1">
+                        <TextBlock>User1: Joke</TextBlock>
+                    </Border>
+                    <Border  HorizontalAlignment="Right" BorderBrush="Red" BorderThickness="1">
+                        <TextBlock HorizontalAlignment="Right">User2: indignation</TextBlock>
+                    </Border>
+                    <Border  HorizontalAlignment="Stretch" BorderBrush="Cyan" BorderThickness="1">
+                        <TextBlock HorizontalAlignment="Center">@All; Server: User3{Admin}: no jokes in work!</TextBlock>
+                    </Border>
                 </StackPanel>
             </ScrollViewer>
         </DockPanel>
